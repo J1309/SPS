@@ -45,29 +45,64 @@
   </div>
   <div class="mobile-overlay"></div>
 
-  <!-- Hero with bat + ball page-hero pattern -->
-  <section class="index-hero page-hero" aria-label="Hero banner showing premium cricket bat and ball">
-    <div class="page-hero-media parallax-layer" data-speed="-0.16">
-      <img src="assets/images/product-bat.jpg" alt="Premium cricket bat with leather ball on pitch" loading="eager">
+  <!-- Cinema Hero -->
+  <section class="hero-cinema" aria-label="Hero banner">
+    <div class="hero-cinema-bg">
+      <img src="assets/images/product-bat.jpg" alt="" aria-hidden="true">
     </div>
-    <div class="motion-field compact" aria-hidden="true">
-      <span class="field-line line-a"></span>
-      <span class="field-line line-b"></span>
-      <span class="field-line line-c"></span>
-      <span class="stump-mark mark-a"></span>
-      <span class="stump-mark mark-b"></span>
-      <span class="stump-mark mark-c"></span>
+    <div class="hero-cinema-overlay"></div>
+    <div class="hero-cinema-grain" aria-hidden="true"></div>
+
+    <div class="hero-cinema-ball" aria-hidden="true">
+      <svg viewBox="0 0 80 80" fill="none">
+        <circle cx="40" cy="40" r="38" fill="url(#ballGrad)" stroke="rgba(150,30,30,0.3)" stroke-width="1"/>
+        <ellipse cx="32" cy="30" rx="16" ry="12" fill="rgba(255,255,255,0.08)" transform="rotate(-20, 32, 30)"/>
+        <path d="M40 2 Q55 20 40 40 Q25 60 40 78" stroke="#e8d5b0" stroke-width="1.5" fill="none" opacity="0.7"/>
+        <path d="M40 2 Q25 20 40 40 Q55 60 40 78" stroke="#e8d5b0" stroke-width="1.5" fill="none" opacity="0.7"/>
+        <defs>
+          <radialGradient id="ballGrad" cx="40%" cy="35%" r="60%">
+            <stop offset="0%" stop-color="#dd4444"/>
+            <stop offset="60%" stop-color="#bb2222"/>
+            <stop offset="100%" stop-color="#881111"/>
+          </radialGradient>
+        </defs>
+      </svg>
     </div>
-    <div class="hero-kinetic-stack" aria-hidden="true">
-      <span class="kinetic-chip bat-ball">Bat &amp; Ball</span>
-      <span class="kinetic-chip">Premium Gear</span>
-      <span class="kinetic-chip ss">SS · MRF · SG</span>
+
+    <div class="hero-cinema-stats" aria-hidden="true">
+      <div class="hero-cinema-stat">
+        <span class="num">15+</span>
+        <span class="label">Premium Brands</span>
+      </div>
+      <div class="hero-cinema-stat">
+        <span class="num">10K</span>
+        <span class="label">Players Trust</span>
+      </div>
+      <div class="hero-cinema-stat">
+        <span class="num">Free</span>
+        <span class="label">Shipping $100+</span>
+      </div>
     </div>
-    <div class="page-hero-content">
-      <span class="hero-badge">Est. 2024 · Premium Cricket Gear</span>
-      <h1>ELEVATE<br><span class="gold">YOUR GAME</span></h1>
-      <p>Handpicked equipment from the world's finest makers. Bats, protective gear, and apparel for players who demand more from every session.</p>
-      <a href="shop.html" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Shop Now</a>
+
+    <div class="hero-cinema-content">
+      <div class="hero-cinema-badge">Est. 2024 · Premium Cricket Gear</div>
+      <h1 class="hero-cinema-title">
+        <span class="char">E</span><span class="char">L</span><span class="char">E</span><span class="char">V</span><span class="char">A</span><span class="char">T</span><span class="char">E</span>
+      </h1>
+      <h1 class="hero-cinema-title gold">
+        <span class="char">Y</span><span class="char">O</span><span class="char">U</span><span class="char">R</span><span class="char">&nbsp;</span><span class="char">G</span><span class="char">A</span><span class="char">M</span><span class="char">E</span>
+      </h1>
+      <div class="hero-cinema-line"></div>
+      <p class="hero-cinema-desc">Handpicked equipment from the world's finest makers. Bats, protective gear, and apparel for players who demand more.</p>
+      <div class="hero-cinema-actions">
+        <a href="shop.html" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Shop Now</a>
+        <a href="#story" class="btn btn-ghost">Explore Collection</a>
+      </div>
+    </div>
+
+    <div class="hero-cinema-scroll" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="hero-cinema-scroll-line"></div>
     </div>
   </section>
 
