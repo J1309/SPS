@@ -1056,7 +1056,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 /* Shop Page */
 .shop-hero {
   height: 40vh;
-  min-height: 320px;
+  min-height: 380px;
   background: var(--black);
   display: flex;
   align-items: center;
@@ -1064,7 +1064,6 @@ input, textarea, select { font-family: inherit; outline: none; }
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding-top: var(--nav-height);
 }
 .shop-hero-bg {
   position: absolute;
@@ -1277,14 +1276,13 @@ input, textarea, select { font-family: inherit; outline: none; }
 /* Cart Page */
 .cart-hero {
   height: 28vh;
-  min-height: 220px;
+  min-height: 280px;
   background: var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
-  padding-top: var(--nav-height);
 }
 .cart-hero h1 {
   font-family: var(--font-display);
@@ -1407,7 +1405,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 /* Contact Page */
 .contact-hero {
   height: 40vh;
-  min-height: 320px;
+  min-height: 380px;
   background: var(--black);
   display: flex;
   align-items: center;
@@ -1415,7 +1413,6 @@ input, textarea, select { font-family: inherit; outline: none; }
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding-top: var(--nav-height);
 }
 .contact-hero h1 {
   font-family: var(--font-display);
@@ -1445,7 +1442,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   position: relative;
   z-index: 3;
   max-width: 680px;
-  padding: 0 32px;
+  padding: 80px 32px 0;
   text-align: center;
 }
 .page-hero-content .hero-badge {
@@ -1473,7 +1470,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 .page-hero-content h1 .gold { color: var(--gold); }
 .page-hero-content p {
   font-size: clamp(15px, 1.4vw, 17px);
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.75);
   max-width: 520px;
   margin: 16px auto 36px;
   line-height: 1.7;
