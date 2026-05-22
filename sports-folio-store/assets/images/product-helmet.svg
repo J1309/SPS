@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cricket helmet</title>
+  <desc id="desc">Illustration of a protective cricket helmet with grill.</desc>
+  <defs><radialGradient id="bg" cx=".2" cy=".15" r=".9"><stop stop-color="#405647"/><stop offset="1" stop-color="#080a06"/></radialGradient></defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+  <g opacity=".25" stroke="#c89516" stroke-width="3"><path d="M130 160 L790 690"/><path d="M60 610 L870 330"/></g>
+  <g transform="translate(145 175)" filter="drop-shadow(0 32px 28px rgba(0,0,0,.45))">
+    <path d="M80 330 C95 120 245 45 395 72 C532 96 617 194 626 348 L80 348Z" fill="#143821"/>
+    <path d="M126 318 C145 172 260 115 388 134 C485 148 553 218 568 318Z" fill="#1f5a3a"/>
+    <path d="M210 350 H635 C618 514 510 595 345 590 C235 587 168 537 144 455" fill="none" stroke="#f2ead2" stroke-width="28" stroke-linecap="round"/>
+    <g stroke="#c7c0ae" stroke-width="12" stroke-linecap="round"><path d="M220 405 H585"/><path d="M230 465 H560"/><path d="M275 350 V540"/><path d="M350 350 V568"/><path d="M430 350 V560"/><path d="M510 350 V510"/></g>
+    <rect x="64" y="316" width="570" height="42" rx="21" fill="#b98a12"/>
+  </g>
+</svg>

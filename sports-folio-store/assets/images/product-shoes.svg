@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cricket shoes</title>
+  <desc id="desc">Illustration of spiked cricket shoes.</desc>
+  <rect width="900" height="900" fill="#e8e0c8"/>
+  <path d="M0 675 C220 600 530 710 900 555 L900 900 L0 900Z" fill="#153723"/>
+  <g transform="translate(122 245)" filter="drop-shadow(0 28px 24px rgba(0,0,0,.3))">
+    <path d="M45 260 C145 175 240 165 355 238 C410 274 482 285 605 275 C645 272 680 300 684 340 C570 382 418 396 249 374 C142 360 73 334 45 260Z" fill="#f8f7ee"/>
+    <path d="M120 260 C220 214 300 222 392 280" fill="none" stroke="#15432b" stroke-width="40" stroke-linecap="round"/>
+    <path d="M460 286 C520 296 586 296 658 286" stroke="#b98a12" stroke-width="20" stroke-linecap="round"/>
+    <g stroke="#222" stroke-width="7" stroke-linecap="round"><path d="M210 300 l54 -42"/><path d="M260 312 l54 -42"/><path d="M310 322 l54 -42"/></g>
+    <g fill="#222"><path d="M164 380 l-18 52 h34Z"/><path d="M285 394 l-18 52 h34Z"/><path d="M430 395 l-18 52 h34Z"/><path d="M570 382 l-18 52 h34Z"/></g>
+  </g>
+</svg>

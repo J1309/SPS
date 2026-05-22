@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cricket sunglasses</title>
+  <desc id="desc">Illustration of polarized sports sunglasses.</desc>
+  <rect width="900" height="900" fill="#e9dfc5"/>
+  <circle cx="710" cy="190" r="90" fill="#b3262e" opacity=".18"/>
+  <g opacity=".18" stroke="#153723" stroke-width="3"><path d="M110 160 L775 720"/><path d="M0 590 L900 350"/></g>
+  <g transform="translate(150 330)" filter="drop-shadow(0 26px 22px rgba(0,0,0,.28))">
+    <path d="M50 95 C110 40 228 32 292 88 C320 112 330 160 300 196 C245 262 115 238 75 184 C50 150 34 112 50 95Z" fill="#132a20"/>
+    <path d="M550 95 C490 40 372 32 308 88 C280 112 270 160 300 196 C355 262 485 238 525 184 C550 150 566 112 550 95Z" fill="#132a20"/>
+    <path d="M292 108 C314 92 332 92 354 108" stroke="#111" stroke-width="28" stroke-linecap="round"/>
+    <path d="M70 95 C0 58 -42 48 -85 60" stroke="#111" stroke-width="22" stroke-linecap="round" fill="none"/>
+    <path d="M530 95 C600 58 642 48 685 60" stroke="#111" stroke-width="22" stroke-linecap="round" fill="none"/>
+    <ellipse cx="175" cy="135" rx="92" ry="58" fill="#2f6948" opacity=".55"/>
+    <ellipse cx="425" cy="135" rx="92" ry="58" fill="#2f6948" opacity=".55"/>
+  </g>
+</svg>

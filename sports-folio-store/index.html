@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Folio Store — Premium Cricket Gear</title>
+  <meta name="description" content="Elevate your innings with handpicked cricket gear from the world's finest makers. Bats, protective equipment, and apparel for players who demand more.">
+  <meta property="og:title" content="Sports Folio Store — Premium Cricket Gear">
+  <meta property="og:description" content="Elevate your innings with handpicked cricket gear. Curated for those who play with purpose.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0c08">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo"><i class="fas fa-crown"></i> SPORTS FOLIO <span>Store</span></a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" class="nav-cart" aria-label="Shopping cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart <span class="cart-badge">0</span></a>
+  </div>
+  <div class="mobile-overlay"></div>
+
+  <!-- Hero with 2-layer parallax -->
+  <section class="hero kinetic-hero" aria-label="Hero banner showing a cricket bat resting on sunlit pitch">
+    <div class="hero-bg parallax-layer" data-speed="-0.3">
+      <div class="hero-bg-layer parallax-layer" data-speed="-0.2">
+        <img src="assets/images/product-bat.svg" alt="Cricket bat resting on a sunlit pitch, shadows stretching across the crease" loading="eager">
+      </div>
+      <div class="hero-bg-layer parallax-layer" data-speed="-0.15" style="opacity:0.4">
+        <img src="assets/images/product-net.svg" alt="Overlay texture of cricket netting in motion" loading="eager">
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Est. 2024 · Premium Cricket Gear</span>
+      <h1 class="hero-title">
+        <span class="line">ELEVATE</span>
+        <span class="line gold">YOUR GAME</span>
+      </h1>
+      <p class="hero-desc">Handpicked equipment from the world's finest makers. Bats, protective gear, and apparel for players who demand more from every session.</p>
+      <div class="hero-cta">
+        <a href="shop.html" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Shop Now</a>
+        <a href="#story" class="btn btn-ghost">Explore Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Marquee -->
+  <section class="marquee" aria-label="Brand partners we carry">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="sep"></span> SG</span>
+      <span class="marquee-item"><span class="sep"></span> SS</span>
+      <span class="marquee-item"><span class="sep"></span> MRF</span>
+      <span class="marquee-item"><span class="sep"></span> Kookaburra</span>
+      <span class="marquee-item"><span class="sep"></span> Gray-Nicolls</span>
+      <span class="marquee-item"><span class="sep"></span> DSC</span>
+      <span class="marquee-item"><span class="sep"></span> SG</span>
+      <span class="marquee-item"><span class="sep"></span> SS</span>
+      <span class="marquee-item"><span class="sep"></span> MRF</span>
+      <span class="marquee-item"><span class="sep"></span> Kookaburra</span>
+      <span class="marquee-item"><span class="sep"></span> Gray-Nicolls</span>
+      <span class="marquee-item"><span class="sep"></span> DSC</span>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section-pad" aria-labelledby="featured-title">
+    <div class="container">
+      <h2 id="featured-title" class="section-title reveal">FEATURED GEAR</h2>
+      <p class="section-sub reveal" style="margin-top:8px">Handpicked essentials to elevate every innings. From bats to accessories, each piece earns its place.</p>
+    </div>
+    <div class="container">
+      <div class="featured-grid" id="featured-grid"></div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section section-pad" id="story" aria-labelledby="story-title">
+    <div class="container">
+      <div class="reveal">
+        <h2 id="story-title" class="section-title">OUR STORY</h2>
+        <p class="section-sub" style="margin-top:8px">Built by cricketers. Every product tells a story of passion and precision.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="story-block">
+        <div class="story-image parallax-layer" data-speed="-0.1">
+          <img src="assets/images/product-bat.svg" alt="Grade A English Willow cricket bat propped against a sunlit net" loading="lazy">
+        </div>
+        <div class="story-text">
+          <div class="story-number">01</div>
+          <h3>Born on the Pitch</h3>
+          <div class="story-line">
+            <p>Sports Folio Store was built from a simple belief: every cricketer deserves equipment that doesn't just look good, but performs under pressure. Our journey started on local grounds where we learned the right gear changes everything. A good bat can inspire an innings; the wrong one can end it too soon.</p>
+          </div>
+          <a href="shop.html" class="story-link">Discover Our Collection <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="story-block">
+        <div class="story-image parallax-layer" data-speed="-0.1">
+          <img src="assets/images/product-gloves.svg" alt="Close up of premium cricket pads and gloves laid out on grass" loading="lazy">
+        </div>
+        <div class="story-text">
+          <div class="story-number">02</div>
+          <h3>Crafted for Champions</h3>
+          <div class="story-line">
+            <p>We partner with the world's finest manufacturers so every bat is hand-selected and every pad rigorously tested. We don't stock what we wouldn't use ourselves. Quality isn't a marketing claim; it's the only standard that matters when you're out in the middle.</p>
+          </div>
+          <a href="shop.html" class="story-link">Shop Premium Brands <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="story-block">
+        <div class="story-image parallax-layer" data-speed="-0.1">
+          <img src="assets/images/product-net.svg" alt="Cricket net session at golden hour, player mid shot" loading="lazy">
+        </div>
+        <div class="story-text">
+          <div class="story-number">03</div>
+          <h3>Your Game, Your Story</h3>
+          <div class="story-line">
+            <p>From weekend club cricketers to aspiring professionals, we're here for your journey. Every purchase fuels a community that lives and breathes the sport. Your story on the pitch matters to us. Let us help you write the next chapter, one innings at a time.</p>
+          </div>
+          <a href="shop.html" class="story-link">Join the Community <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars (replaces hero-metric stats) -->
+  <section class="pillars section-pad" aria-labelledby="pillars-title">
+    <div class="container">
+      <h2 id="pillars-title" class="section-title reveal" style="color:var(--white)">THE SPORTS FOLIO DIFFERENCE</h2>
+      <p class="section-sub reveal" style="color:rgba(255,255,255,0.4);margin-top:8px">Four commitments that define how we work, what we stock, and why players trust us.</p>
+    </div>
+    <div class="container">
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-card-label">01 · Curation</div>
+          <h3>Every Piece Handpicked</h3>
+          <p>We test every product before it hits the shelf. If we wouldn't take it to the nets, we don't list it. Our catalog runs deep but stays selective: 500+ products across 15 brands, each one vetted for real match conditions.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-card-label">02 · Craft</div>
+          <h3>Built to Outlast Seasons</h3>
+          <p>From English Willow bats to premium leather balls, we stock equipment built for repeated use, not just unboxing. Our return rate sits under 2% because we'd rather lose a sale than ship something that won't hold up.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-card-label">03 · Access</div>
+          <h3>Free Shipping, No Fine Print</h3>
+          <p>Orders over $100 ship free. No coupon codes, no minimum on clearance, no regional exceptions. We believe access to good gear shouldn't come with extra costs tacked on at checkout.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-card-label">04 · Community</div>
+          <h3>10,000+ Players & Growing</h3>
+          <p>From academy kids to state-level players, the Sports Folio community spans every level of the game. We sponsor local tournaments, host gear trials, and reinvest in the sport that gives us purpose.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection Spotlight -->
+  <section class="section-pad" aria-labelledby="spotlight-title">
+    <div class="container">
+      <h2 id="spotlight-title" class="section-title reveal">COLLECTION SPOTLIGHT</h2>
+      <p class="section-sub reveal" style="margin-top:8px">Three categories. One standard: premium.</p>
+    </div>
+    <div class="container spotlight-grid">
+      <a href="shop.html?category=bats" class="spotlight-card reveal">
+        <img src="assets/images/product-bat.svg" alt="Cricket bats lined up in a row, English Willow grains visible" loading="lazy">
+        <div class="spotlight-overlay">
+          <h3>Cricket Bats</h3>
+          <p>English Willow · 20+ Models</p>
+          <span class="btn btn-ghost" style="align-self:flex-start;padding:7px 18px;font-size:11px">Browse Category</span>
+        </div>
+      </a>
+      <a href="shop.html?category=helmets" class="spotlight-card reveal">
+        <img src="assets/images/product-helmet.svg" alt="Premium cricket helmet with titanium grill on dark background" loading="lazy">
+        <div class="spotlight-overlay">
+          <h3>Protective Gear</h3>
+          <p>Gloves · Pads · Helmets · Guards</p>
+          <span class="btn btn-ghost" style="align-self:flex-start;padding:7px 18px;font-size:11px">Browse Category</span>
+        </div>
+      </a>
+      <a href="shop.html?category=apparel" class="spotlight-card reveal">
+        <img src="assets/images/product-jersey.svg" alt="Cricket training jersey with moisture wicking fabric detail" loading="lazy">
+        <div class="spotlight-overlay">
+          <h3>Apparel</h3>
+          <p>Jerseys · Shoes · Accessories</p>
+          <span class="btn btn-ghost" style="align-self:flex-start;padding:7px 18px;font-size:11px">Browse Category</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-pad" aria-labelledby="testimonials-title">
+    <div class="container">
+      <h2 id="testimonials-title" class="section-title reveal" style="color:var(--white)">FROM THE CREASE</h2>
+      <p class="section-sub reveal" style="color:rgba(255,255,255,0.4);margin-top:8px">Trusted by thousands of cricketers across India.</p>
+    </div>
+    <div class="container" style="margin-top:48px">
+      <div class="swiper testimonials-swiper">
+        <div class="swiper-wrapper" id="testimonials-wrapper"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter" aria-labelledby="newsletter-title">
+    <div class="container">
+      <h2 id="newsletter-title">STAY IN THE CREASE</h2>
+      <p>Exclusive drops, pro tips, and member discounts. No spam, just cricket.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault();showToast('Subscribed successfully. Welcome to the crease.','success');this.querySelector('input').value=''">
+        <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><i class="fas fa-crown"></i> SPORTS FOLIO <span>Store</span></div>
+        <p>Elevating cricketing skills with premium accessories. Curated for champions, delivered to your door.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop All</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Categories</h4>
+        <a href="shop.html?category=bats">Bats</a>
+        <a href="shop.html?category=helmets">Protective</a>
+        <a href="shop.html?category=shoes">Shoes</a>
+        <a href="shop.html?category=apparel">Apparel</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="#"><i class="fas fa-map-marker-alt" style="width:16px"></i> Mumbai, India</a>
+        <a href="#"><i class="fas fa-phone" style="width:16px"></i> +91 98765 43210</a>
+        <a href="#"><i class="fas fa-envelope" style="width:16px"></i> hello@sportsfoliostore.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sports Folio Store. All rights reserved. Made for cricketers.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var featured = document.getElementById('featured-grid');
+      if (featured && typeof products !== 'undefined') {
+        var featuredProducts = products.filter(function(p) { return p.tags.indexOf('bestseller') !== -1; }).slice(0, 6);
+        featured.innerHTML = featuredProducts.map(function(p) {
+          return '<div class="product-card visible" data-id="' + p.id + '">' +
+            '<div class="product-card-image">' +
+              '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy">' +
+              (p.discount ? '<span class="product-card-tag sale">-' + p.discount + '%</span>' : '<span class="product-card-tag">Bestseller</span>') +
+            '</div>' +
+            '<div class="product-card-body">' +
+              '<div class="product-card-brand">' + p.brand + '</div>' +
+              '<div class="product-card-name">' + p.name + '</div>' +
+              '<div class="product-card-price">' +
+                '<span class="current">$' + p.price.toFixed(2) + '</span>' +
+                (p.originalPrice ? '<span class="old">$' + p.originalPrice.toFixed(2) + '</span>' : '') +
+              '</div>' +
+              '<div class="product-card-stars">' + '&#9733;'.repeat(Math.floor(p.rating)) + (p.rating % 1 >= 0.5 ? '&#189;' : '') + ' (' + p.reviewCount + ')</div>' +
+              '<button class="btn btn-primary" onclick="window.addToCart(\'' + p.id + '\')"><i class="fas fa-shopping-cart"></i> Add to Cart</button>' +
+            '</div>' +
+          '</div>';
+        }).join('');
+      }
+
+      var tw = document.getElementById('testimonials-wrapper');
+      if (tw && typeof testimonials !== 'undefined') {
+        tw.innerHTML = testimonials.map(function(t) {
+          return '<div class="swiper-slide">' +
+            '<div class="testimonial-card">' +
+              '<div class="testimonial-stars">' + '&#9733;'.repeat(t.rating) + '</div>' +
+              '<div class="testimonial-quote">"' + t.review + '"</div>' +
+              '<div class="testimonial-author">' +
+                '<div class="testimonial-avatar">' + t.avatar + '</div>' +
+                '<div>' +
+                  '<div class="testimonial-name">' + t.name + '</div>' +
+                  '<div class="testimonial-role">' + t.role + '</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+        }).join('');
+      }
+
+      window.showToast = function showToast(msg, type) {
+        if (typeof Toastify !== 'undefined') {
+          Toastify({ text: msg, className: type || 'success', duration: 3000, gravity: 'bottom', position: 'center', style: { background: type === 'error' ? '#EF4444' : '#1A5E38' } }).showToast();
+        }
+      };
+    })();
+  </script>
+</body>
+</html>

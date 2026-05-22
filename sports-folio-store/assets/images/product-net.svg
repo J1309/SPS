@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Practice cricket net</title>
+  <desc id="desc">Illustration of a cricket practice net with pitch markings.</desc>
+  <rect width="900" height="900" fill="#10261b"/>
+  <path d="M130 120 H770 V780 H130Z" fill="#173b29"/>
+  <g stroke="#e8ddbd" stroke-width="5" opacity=".38"><path d="M130 200 H770"/><path d="M130 280 H770"/><path d="M130 360 H770"/><path d="M130 440 H770"/><path d="M130 520 H770"/><path d="M130 600 H770"/><path d="M130 680 H770"/><path d="M210 120 V780"/><path d="M290 120 V780"/><path d="M370 120 V780"/><path d="M450 120 V780"/><path d="M530 120 V780"/><path d="M610 120 V780"/><path d="M690 120 V780"/></g>
+  <path d="M350 780 L430 300 H470 L550 780Z" fill="#d1b26a" opacity=".8"/>
+  <g stroke="#fff" stroke-width="6" opacity=".7"><path d="M385 630 H515"/><path d="M405 500 H495"/></g>
+  <circle cx="610" cy="395" r="34" fill="#b3262e"/>
+</svg>

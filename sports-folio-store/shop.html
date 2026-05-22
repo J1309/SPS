@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Sports Folio Store</title>
+  <meta name="description" content="Browse our collection of premium cricket gear. Bats, gloves, pads, helmets, and accessories from top brands like SG, MRF, and Kookaburra.">
+  <meta property="og:title" content="Shop Cricket Gear — Sports Folio Store">
+  <meta property="og:description" content="Premium cricket equipment from SG, MRF, Kookaburra, and more.">
+  <meta name="theme-color" content="#0a0c08">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo"><i class="fas fa-crown"></i> SPORTS FOLIO <span>Store</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" class="nav-cart" aria-label="Shopping cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart <span class="cart-badge">0</span></a>
+  </div>
+  <div class="mobile-overlay"></div>
+
+  <section class="shop-hero" aria-label="Shop banner">
+    <div class="shop-hero-bg"></div>
+    <div>
+      <div class="breadcrumb"><a href="index.html">Home</a> / Shop</div>
+      <h1>SHOP GEAR</h1>
+    </div>
+  </section>
+
+  <!-- Mobile filter button (visible only on mobile) -->
+  <div class="container">
+    <button class="mobile-filter-btn" id="mobileFilterBtn" aria-label="Open filters">
+      <i class="fas fa-sliders-h"></i> Filters
+    </button>
+  </div>
+
+  <!-- Mobile filter drawer -->
+  <div class="filter-drawer-overlay" id="filterDrawerOverlay"></div>
+  <div class="filter-drawer" id="filterDrawer" role="dialog" aria-label="Filter options" aria-modal="true">
+    <div class="filter-drawer-header">
+      <h3>Filters</h3>
+      <button class="filter-drawer-close" id="filterDrawerClose" aria-label="Close filters"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="filterDrawerContent"></div>
+    <button class="filter-drawer-apply" id="filterDrawerApply">Apply Filters</button>
+  </div>
+
+  <div class="container shop-layout">
+    <aside class="shop-sidebar" aria-label="Product filters" id="shopSidebar">
+      <div class="filter-section">
+        <div class="filter-section-header">
+          <h4>Category</h4>
+          <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+        </div>
+        <div class="filter-section-content" id="filterCategory">
+          <label><input type="radio" name="category" value="all" checked> All Products</label>
+          <label><input type="radio" name="category" value="bats"> Bats</label>
+          <label><input type="radio" name="category" value="balls"> Balls</label>
+          <label><input type="radio" name="category" value="gloves"> Gloves</label>
+          <label><input type="radio" name="category" value="pads"> Pads</label>
+          <label><input type="radio" name="category" value="helmets"> Helmets</label>
+          <label><input type="radio" name="category" value="shoes"> Shoes</label>
+          <label><input type="radio" name="category" value="bags"> Bags</label>
+          <label><input type="radio" name="category" value="accessories"> Accessories</label>
+          <label><input type="radio" name="category" value="apparel"> Apparel</label>
+          <label><input type="radio" name="category" value="protective"> Protective</label>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-section-header">
+          <h4>Price Range</h4>
+          <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+        </div>
+        <div class="filter-section-content" id="filterPrice">
+          <div class="price-range">
+            <input type="range" id="priceRange" min="0" max="500" value="500" step="10" aria-label="Maximum price">
+            <div class="price-values">
+              <span>$0</span>
+              <span id="priceValue">$0 – $500</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-section-header">
+          <h4>Brand</h4>
+          <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+        </div>
+        <div class="filter-section-content" id="filterBrand">
+          <label><input type="checkbox" name="brand" value="SG"> SG</label>
+          <label><input type="checkbox" name="brand" value="SS"> SS</label>
+          <label><input type="checkbox" name="brand" value="MRF"> MRF</label>
+          <label><input type="checkbox" name="brand" value="DSC"> DSC</label>
+          <label><input type="checkbox" name="brand" value="Kookaburra"> Kookaburra</label>
+          <label><input type="checkbox" name="brand" value="Gray-Nicolls"> Gray-Nicolls</label>
+        </div>
+      </div>
+
+      <button class="btn-clear" aria-label="Clear all filters"><i class="fas fa-times"></i> Clear All Filters</button>
+    </aside>
+
+    <main>
+      <div class="shop-toolbar">
+        <span class="results">15 products found</span>
+        <div>
+          <label for="sortBy" class="sr-only">Sort by</label>
+          <select id="sortBy" aria-label="Sort products">
+            <option value="popularity">Sort: Popularity</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+      <div class="filter-chips" id="filterChips"></div>
+      <div class="shop-grid" role="list" aria-label="Product grid"></div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" role="dialog" aria-label="Product quick view" aria-modal="true">
+    <div class="modal" style="position:relative">
+      <button class="modal-close" onclick="window.closeModal()" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <div class="modal-content">
+        <div class="modal-image"><img src="assets/images/product-bat.svg" alt="Product preview"></div>
+        <div class="modal-info">
+          <div class="brand"></div>
+          <h2></h2>
+          <div class="price"></div>
+          <div class="desc"></div>
+          <div class="size-select">
+            <label for="modalSize">Size</label>
+            <select id="modalSize"></select>
+          </div>
+          <div class="qty">
+            <button class="qty-minus" aria-label="Decrease quantity">−</button>
+            <span>1</span>
+            <button class="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><i class="fas fa-crown"></i> SPORTS FOLIO <span>Store</span></div>
+        <p>Elevating cricketing skills with premium accessories. Curated for champions, delivered to your door.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop All</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Categories</h4>
+        <a href="shop.html?category=bats">Bats</a>
+        <a href="shop.html?category=helmets">Protective</a>
+        <a href="shop.html?category=shoes">Shoes</a>
+        <a href="shop.html?category=apparel">Apparel</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="#"><i class="fas fa-map-marker-alt" style="width:16px"></i> Mumbai, India</a>
+        <a href="#"><i class="fas fa-phone" style="width:16px"></i> +91 98765 43210</a>
+        <a href="#"><i class="fas fa-envelope" style="width:16px"></i> hello@sportsfoliostore.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sports Folio Store. All rights reserved. Made for cricketers.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

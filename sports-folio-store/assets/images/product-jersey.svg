@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cricket jersey</title>
+  <desc id="desc">Illustration of a performance cricket jersey.</desc>
+  <rect width="900" height="900" fill="#f2ead2"/>
+  <path d="M0 690 C240 600 470 755 900 575 L900 900 L0 900Z" fill="#0f3722"/>
+  <g transform="translate(190 115)" filter="drop-shadow(0 30px 26px rgba(0,0,0,.3))">
+    <path d="M230 45 H330 L505 165 L420 300 L392 650 H168 L140 300 L55 165Z" fill="#f8f7ef"/>
+    <path d="M230 45 C245 88 315 88 330 45 L360 90 C332 130 228 130 200 90Z" fill="#143821"/>
+    <path d="M170 250 H390 L378 585 H182Z" fill="#1f5a3a"/>
+    <path d="M170 250 C230 320 315 355 390 250 V330 C312 408 230 398 170 330Z" fill="#b98a12"/>
+    <text x="280" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="74" font-weight="800" fill="#f8f7ef">SFS</text>
+  </g>
+</svg>

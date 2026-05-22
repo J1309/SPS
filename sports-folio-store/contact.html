@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Sports Folio Store</title>
+  <meta name="description" content="Get in touch with Sports Folio Store. We'd love to hear from you.">
+  <meta name="theme-color" content="#0a0c08">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo"><i class="fas fa-crown"></i> SPORTS FOLIO <span>Store</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="cart.html" class="nav-cart" aria-label="Shopping cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Cart <span class="cart-badge">0</span></a>
+  </div>
+  <div class="mobile-overlay"></div>
+
+  <section class="contact-hero page-hero" aria-label="Contact banner">
+    <div class="page-hero-media parallax-layer" data-speed="-0.18">
+      <img src="assets/images/product-net.svg" alt="Cricket training net under stadium lights" loading="eager">
+    </div>
+    <div class="shop-hero-bg"></div>
+    <div class="motion-field compact" aria-hidden="true">
+      <span class="field-line line-a"></span>
+      <span class="field-line line-c"></span>
+      <span class="stump-mark mark-a"></span>
+      <span class="stump-mark mark-c"></span>
+    </div>
+    <div class="page-hero-content">
+      <span class="hero-badge">Support & Team Orders</span>
+      <h1>GET IN TOUCH</h1>
+      <p>Talk to us about orders, returns, kit advice, and team equipment planning.</p>
+    </div>
+  </section>
+
+  <div class="container contact-layout">
+    <div class="contact-form">
+      <h2>Send us a message</h2>
+      <form action="https://formspree.io/f/xpznkwpo" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+          <div class="error-msg">Please enter your name</div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          <div class="error-msg">Please enter a valid email</div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="general">General Inquiry</option>
+            <option value="order">Order Support</option>
+            <option value="returns">Returns & Exchanges</option>
+            <option value="wholesale">Wholesale Inquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
+          <div class="error-msg">Please enter your message</div>
+        </div>
+        <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+      <div class="form-success">
+        <div class="check"><i class="fas fa-check-circle"></i></div>
+        <h3>Message Sent</h3>
+        <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="contact-info">
+        <div class="contact-card reveal">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h4>Our Location</h4>
+            <p>Sports Folio Store<br>42 Marine Drive, Colaba<br>Mumbai, Maharashtra 400001<br>India</p>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <h4>Phone</h4>
+            <p>+91 98765 43210<br>+91 98765 43211</p>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h4>Email</h4>
+            <p>hello@sportsfoliostore.com<br>support@sportsfoliostore.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-map reveal" style="margin-top:24px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.2!2d72.8!3d18.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU0JzAwLjAiTiA3MsKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen loading="lazy" title="Store location map in Mumbai, India"></iframe>
+      </div>
+
+      <div class="contact-social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><i class="fas fa-crown"></i> SPORTS FOLIO <span>Store</span></div>
+        <p>Elevating cricketing skills with premium accessories. Curated for champions, delivered to your door.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop All</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Categories</h4>
+        <a href="shop.html?category=bats">Bats</a>
+        <a href="shop.html?category=helmets">Protective</a>
+        <a href="shop.html?category=shoes">Shoes</a>
+        <a href="shop.html?category=apparel">Apparel</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="#"><i class="fas fa-map-marker-alt" style="width:16px"></i> Mumbai, India</a>
+        <a href="#"><i class="fas fa-phone" style="width:16px"></i> +91 98765 43210</a>
+        <a href="#"><i class="fas fa-envelope" style="width:16px"></i> hello@sportsfoliostore.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sports Folio Store. All rights reserved. Made for cricketers.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

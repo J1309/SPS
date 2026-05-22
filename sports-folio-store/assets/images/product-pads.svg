@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Batting pads</title>
+  <desc id="desc">Illustration of cricket batting pads with cane rolls.</desc>
+  <rect width="900" height="900" fill="#f2ead2"/>
+  <path d="M0 740 C280 620 500 780 900 620 L900 900 L0 900Z" fill="#143821"/>
+  <g opacity=".18" stroke="#b98a12" stroke-width="3"><path d="M40 130 H860"/><path d="M120 0 V900"/><path d="M690 0 V900"/></g>
+  <g transform="translate(210 115)" filter="drop-shadow(0 28px 24px rgba(0,0,0,.28))">
+    <path d="M70 20 H230 C250 160 256 355 216 650 H42 C-3 352 10 150 70 20Z" fill="#f9f7ec"/>
+    <path d="M290 20 H450 C510 150 523 352 478 650 H304 C264 355 270 160 290 20Z" fill="#f9f7ec"/>
+    <g stroke="#c8b987" stroke-width="16" stroke-linecap="round"><path d="M102 70 V595"/><path d="M153 58 V608"/><path d="M204 76 V590"/><path d="M322 76 V590"/><path d="M373 58 V608"/><path d="M424 70 V595"/></g>
+    <g fill="#b3262e"><rect x="52" y="180" width="178" height="34" rx="15"/><rect x="292" y="180" width="178" height="34" rx="15"/><rect x="35" y="475" width="188" height="34" rx="15"/><rect x="310" y="475" width="188" height="34" rx="15"/></g>
+  </g>
+</svg>

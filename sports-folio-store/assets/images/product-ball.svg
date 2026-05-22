@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cricket ball</title>
+  <desc id="desc">Illustration of a stitched cricket ball on a turf background.</desc>
+  <defs>
+    <radialGradient id="ball" cx=".35" cy=".28" r=".72"><stop stop-color="#ff7070"/><stop offset=".45" stop-color="#c32231"/><stop offset="1" stop-color="#5e0d17"/></radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f0df"/><stop offset="1" stop-color="#153320"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="28" stdDeviation="24" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+  <g opacity=".2" stroke="#0c2b1c" stroke-width="3"><path d="M0 255 H900"/><path d="M0 555 H900"/><path d="M210 0 V900"/><path d="M630 0 V900"/></g>
+  <circle cx="450" cy="450" r="235" fill="url(#ball)" filter="url(#shadow)"/>
+  <path d="M362 226 C455 330 485 564 548 675" fill="none" stroke="#f7d7c2" stroke-width="16"/>
+  <g stroke="#f7d7c2" stroke-width="7" stroke-linecap="round">
+    <path d="M378 260 l-45 34"/><path d="M407 311 l-48 31"/><path d="M430 370 l-52 26"/><path d="M454 438 l-54 19"/>
+    <path d="M478 506 l-54 12"/><path d="M505 568 l-52 6"/><path d="M535 626 l-47 0"/>
+  </g>
+  <ellipse cx="370" cy="310" rx="70" ry="34" fill="#fff" opacity=".12" transform="rotate(-30 370 310)"/>
+</svg>

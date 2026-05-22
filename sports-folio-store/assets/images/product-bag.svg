@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cricket kit bag</title>
+  <desc id="desc">Illustration of a cricket kit bag with bat handle.</desc>
+  <rect width="900" height="900" fill="#101510"/>
+  <g opacity=".22" stroke="#c89516" stroke-width="3"><path d="M0 250 H900"/><path d="M0 650 H900"/><path d="M710 0 V900"/></g>
+  <g filter="drop-shadow(0 34px 30px rgba(0,0,0,.45))">
+    <rect x="240" y="320" width="450" height="250" rx="58" fill="#173f2a"/>
+    <rect x="275" y="365" width="190" height="150" rx="28" fill="#23593b"/>
+    <path d="M340 330 C355 238 415 198 505 210 C575 219 618 260 628 330" fill="none" stroke="#d8c27b" stroke-width="24" stroke-linecap="round"/>
+    <rect x="500" y="365" width="125" height="42" rx="20" fill="#b98a12"/>
+    <path d="M178 198 H226 V610 H178Z" fill="#d5a44f" transform="rotate(-16 202 404)"/>
+    <rect x="166" y="164" width="72" height="100" rx="28" fill="#1a1a1a" transform="rotate(-16 202 214)"/>
+  </g>
+</svg>

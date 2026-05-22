@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Protective guard</title>
+  <desc id="desc">Illustration of a cricket abdominal guard.</desc>
+  <rect width="900" height="900" fill="#11140f"/>
+  <g opacity=".24" stroke="#c89516" stroke-width="3"><path d="M80 150 L790 710"/><path d="M0 610 L900 330"/></g>
+  <g transform="translate(225 145)" filter="drop-shadow(0 34px 28px rgba(0,0,0,.45))">
+    <path d="M225 35 C345 105 430 210 430 355 C430 520 330 635 225 670 C120 635 20 520 20 355 C20 210 105 105 225 35Z" fill="#f7f2df"/>
+    <path d="M225 110 C305 165 360 250 360 360 C360 470 300 555 225 590 C150 555 90 470 90 360 C90 250 145 165 225 110Z" fill="#193f2b"/>
+    <path d="M225 155 C275 205 305 275 305 360 C305 445 270 505 225 535 C180 505 145 445 145 360 C145 275 175 205 225 155Z" fill="#b98a12"/>
+  </g>
+</svg>
