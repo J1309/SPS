@@ -1064,6 +1064,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   text-align: center;
   position: relative;
   overflow: hidden;
+  padding-top: var(--nav-height);
 }
 .shop-hero-bg {
   position: absolute;
@@ -1283,6 +1284,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   justify-content: center;
   text-align: center;
   position: relative;
+  padding-top: var(--nav-height);
 }
 .cart-hero h1 {
   font-family: var(--font-display);
@@ -1413,6 +1415,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   text-align: center;
   position: relative;
   overflow: hidden;
+  padding-top: var(--nav-height);
 }
 .contact-hero h1 {
   font-family: var(--font-display);
