@@ -373,6 +373,48 @@ input, textarea, select { font-family: inherit; outline: none; }
   pointer-events: none;
 }
 
+/* Cricket field decorations */
+.hero-cinema-field {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.hero-cinema-field .field-line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(200,151,42,0.1), transparent);
+  left: 10%;
+  right: 10%;
+  top: 60%;
+  transform-origin: center;
+}
+.hero-cinema-field .field-line.line-a { top: 55%; transform: rotate(-2deg); }
+.hero-cinema-field .field-line.line-b { top: 60%; transform: rotate(1deg); }
+.hero-cinema-field .field-line.line-c { top: 65%; transform: rotate(3deg); }
+.hero-cinema-field .stump-mark {
+  position: absolute;
+  width: 3px;
+  height: 20px;
+  background: rgba(200,151,42,0.08);
+  border-radius: 1px;
+}
+.hero-cinema-field .stump-mark.mark-a { bottom: 25%; left: 28%; }
+.hero-cinema-field .stump-mark.mark-b { bottom: 25%; left: 50%; }
+.hero-cinema-field .stump-mark.mark-c { bottom: 25%; left: 72%; }
+.hero-cinema-field .stump-mark::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: rgba(200,151,42,0.06);
+}
+
 /* Cricket ball follower */
 .hero-cinema-ball {
   position: absolute;
@@ -513,6 +555,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   .hero-cinema-content { padding: 0 24px; }
   .hero-cinema-stats { display: none; }
   .hero-cinema-ball { display: none; }
+  .hero-cinema-field { display: none; }
   .hero-cinema-scroll { bottom: 24px; }
   .hero-cinema-actions .btn { font-size: 13px; padding: 11px 22px; }
   .hero-cinema-line { margin: 16px 0; }
