@@ -82,6 +82,36 @@
     return '$' + amount.toFixed(2);
   }
 
+  function initThemeToggle() {
+    var html = document.documentElement;
+    var toggles = document.querySelectorAll('.theme-toggle');
+    var mobileToggles = document.querySelectorAll('.theme-toggle-mobile');
+    var saved = localStorage.getItem('sfs_theme') || 'dark';
+
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        html.setAttribute('data-theme', 'light');
+      } else {
+        html.removeAttribute('data-theme');
+      }
+      var icon = theme === 'light' ? 'fa-sun' : 'fa-moon';
+      var label = theme === 'light' ? 'Light' : 'Dark';
+      toggles.forEach(function (t) { t.innerHTML = '<i class="fas ' + icon + '"></i>'; });
+      mobileToggles.forEach(function (t) { t.innerHTML = '<i class="fas ' + icon + '"></i> <span>' + label + ' Mode</span>'; });
+      localStorage.setItem('sfs_theme', theme);
+    }
+
+    applyTheme(saved);
+
+    function toggleTheme() {
+      var current = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      applyTheme(current);
+    }
+
+    toggles.forEach(function (t) { t.addEventListener('click', toggleTheme); });
+    mobileToggles.forEach(function (t) { t.addEventListener('click', toggleTheme); });
+  }
+
   function initNavbar() {
     var navbar = document.querySelector('.navbar');
     var hamburger = document.querySelector('.hamburger');
@@ -891,6 +921,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     if (typeof products !== 'undefined') window._products = products;
     initNavbar();
+    initThemeToggle();
     initLenis();
     initMarquee();
     initSwiper();
