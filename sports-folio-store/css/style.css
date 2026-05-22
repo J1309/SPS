@@ -12,7 +12,7 @@
   --success: oklch(0.62 0.18 140);
   --error: oklch(0.58 0.22 25);
   --gradient: linear-gradient(135deg, var(--green), var(--gold));
-  --gradient-lime: linear-gradient(135deg, oklch(0.78 0.20 120), oklch(0.60 0.18 120));
+  --gradient-lime: linear-gradient(135deg, oklch(0.78 0.20 120), oklch(0.78 0.20 120));
   --font-display: 'Teko', sans-serif;
   --font-body: 'Spectral', serif;
   --transition-fast: 200ms ease;
