@@ -881,8 +881,6 @@
       add(image, -0.18, 'y', image.closest('.spotlight-card'));
     });
 
-    });
-
     function update() {
       var currentScrollY = window.scrollY || window.pageYOffset || 0;
       if (currentScrollY === lastScrollY) {
