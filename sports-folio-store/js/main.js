@@ -40,7 +40,7 @@
     }
     saveCart(cart);
     if (typeof Toastify !== 'undefined') {
-      Toastify({ text: 'Added to cart', className: 'success', duration: 2000, gravity: 'bottom', position: 'center', style: { background: '#1A5E38' } }).showToast();
+      Toastify({ text: 'Added to cart', className: 'success', duration: 2000, gravity: 'bottom', position: 'center', style: { background: '#3E7700' } }).showToast();
     }
     return cart;
   };
@@ -74,7 +74,7 @@
 
   function showToast(message, type) {
     if (typeof Toastify !== 'undefined') {
-      Toastify({ text: message, className: type || 'success', duration: 3000, gravity: 'bottom', position: 'center', style: { background: type === 'error' ? '#EF4444' : '#1A5E38' } }).showToast();
+      Toastify({ text: message, className: type || 'success', duration: 3000, gravity: 'bottom', position: 'center', style: { background: type === 'error' ? '#EF4444' : '#3E7700' } }).showToast();
     }
   }
 

@@ -1,6 +1,6 @@
 :root {
-  --green: oklch(0.42 0.10 155);
-  --green-dark: oklch(0.35 0.08 155);
+  --green: oklch(0.78 0.20 120);
+  --green-dark: oklch(0.60 0.18 120);
   --black: oklch(0.06 0.015 160);
   --black-warm: oklch(0.10 0.012 140);
   --gold: oklch(0.65 0.13 82);
@@ -12,7 +12,7 @@
   --success: oklch(0.62 0.18 140);
   --error: oklch(0.58 0.22 25);
   --gradient: linear-gradient(135deg, var(--green), var(--gold));
-  --gradient-lime: linear-gradient(135deg, oklch(0.55 0.18 130), oklch(0.42 0.14 140));
+  --gradient-lime: linear-gradient(135deg, oklch(0.78 0.20 120), oklch(0.60 0.18 120));
   --font-display: 'Teko', sans-serif;
   --font-body: 'Spectral', serif;
   --transition-fast: 200ms ease;
@@ -268,7 +268,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 60%, rgba(26,94,56,0.2) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 30% 60%, oklch(0.78 0.20 120 / 0.1) 0%, transparent 60%);
 }
 .hero-content {
   position: relative;
@@ -360,7 +360,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 40% 50%, rgba(26,94,56,0.25) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 40% 50%, rgba(200,151,42,0.08) 0%, transparent 60%);
 }
 .hero-cinema-grain {
   position: absolute;
@@ -712,7 +712,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(26,94,56,0.15), transparent);
+  background: linear-gradient(135deg, oklch(0.78 0.20 120 / 0.08), transparent);
 }
 .story-number {
   font-family: var(--font-display);
@@ -830,7 +830,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   padding: 32px;
   transition: background var(--transition-base);
 }
-.spotlight-card:hover .spotlight-overlay { background: linear-gradient(to top, rgba(26,94,56,0.85) 0%, rgba(26,94,56,0.3) 50%, rgba(0,0,0,0.2) 100%); }
+.spotlight-card:hover .spotlight-overlay { background: linear-gradient(to top, oklch(0.78 0.20 120 / 0.25) 0%, oklch(0.78 0.20 120 / 0.1) 50%, rgba(0,0,0,0.2) 100%); }
 .spotlight-overlay h3 {
   font-family: var(--font-display);
   font-size: 32px;
@@ -1020,7 +1020,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 .shop-hero-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 30%, rgba(26,94,56,0.25) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 30%, oklch(0.78 0.20 120 / 0.12) 0%, transparent 60%);
 }
 .shop-hero h1 {
   font-family: var(--font-display);
@@ -1388,7 +1388,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   font-family: var(--font-body);
 }
-.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(26,94,56,0.08); }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--green); box-shadow: 0 0 0 3px oklch(0.78 0.20 120 / 0.15); }
 .form-group textarea { min-height: 120px; resize: vertical; }
 .form-group.error input, .form-group.error textarea { border-color: var(--error); animation: shake 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
 @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 50% { transform: translateX(6px); } 75% { transform: translateX(-4px); } }
@@ -1430,7 +1430,7 @@ input, textarea, select { font-family: inherit; outline: none; }
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background: rgba(26,94,56,0.08);
+  background: oklch(0.78 0.20 120 / 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1547,18 +1547,18 @@ input, textarea, select { font-family: inherit; outline: none; }
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  background: rgba(26,94,56,0.08);
+  background: oklch(0.78 0.20 120 / 0.06);
   border-radius: 20px;
   font-size: 12px;
   font-weight: 500;
   transition: var(--transition-fast);
 }
-.filter-chip:hover { background: rgba(26,94,56,0.15); }
+.filter-chip:hover { background: oklch(0.78 0.20 120 / 0.1); }
 .filter-chip-remove {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: rgba(26,94,56,0.2);
+  background: oklch(0.78 0.20 120 / 0.12);
   display: inline-flex;
   align-items: center;
   justify-content: center;
