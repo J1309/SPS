@@ -145,32 +145,14 @@
 
     var mm = gsap.matchMedia();
 
-    /* Hero parallax: 2-layer depth effect */
+    /* Boomerang video hero entrance */
     mm.add('(prefers-reduced-motion: no-preference)', function () {
-      var heroLayers = document.querySelectorAll('.hero-bg-layer');
-      if (heroLayers.length) {
-        gsap.to(heroLayers[0], {
-          yPercent: 25,
-          ease: 'none',
-          scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1.5 },
-        });
-        if (heroLayers[1]) {
-          gsap.to(heroLayers[1], {
-            yPercent: 35,
-            ease: 'none',
-            scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1.5 },
-          });
-        }
-      }
-
-      var heroTitle = document.querySelector('.hero-title');
-      var heroBadge = document.querySelector('.hero-badge');
-      var heroDesc = document.querySelector('.hero-desc');
-      var heroCta = document.querySelector('.hero-cta');
-
-      if (heroBadge) gsap.from(heroBadge, { y: 24, opacity: 0, duration: 0.7, delay: 0.1, ease: 'power2.out' });
-      if (heroTitle) {
-        gsap.from(heroTitle.querySelectorAll('.line'), {
+      var vTitle = document.querySelector('.hero-vid-title');
+      var vDesc = document.querySelector('.hero-vid-desc');
+      var vCta = document.querySelector('.hero-vid-cta');
+      var vPlay = document.querySelector('.hero-vid-play');
+      if (vTitle) {
+        gsap.from(vTitle.querySelectorAll('.hero-vid-line'), {
           y: 80,
           opacity: 0,
           duration: 1.1,
@@ -179,11 +161,9 @@
           delay: 0.3,
         });
       }
-      if (heroDesc) gsap.from(heroDesc, { y: 24, opacity: 0, duration: 0.7, delay: 0.6, ease: 'power2.out' });
-      if (heroCta) gsap.from(heroCta, { y: 24, opacity: 0, duration: 0.7, delay: 0.8, ease: 'power2.out' });
-
-      var heroStack = document.querySelector('.hero-kinetic-stack');
-      if (heroStack) gsap.from(heroStack.children, { x: 42, opacity: 0, duration: 0.8, stagger: 0.12, delay: 0.9, ease: 'power3.out' });
+      if (vDesc) gsap.from(vDesc, { y: 24, opacity: 0, duration: 0.7, delay: 0.6, ease: 'power2.out' });
+      if (vCta) gsap.from(vCta, { y: 24, opacity: 0, duration: 0.7, delay: 0.9, ease: 'power2.out' });
+      if (vPlay) gsap.from(vPlay, { y: 24, opacity: 0, duration: 0.7, delay: 1.0, ease: 'power2.out' });
     });
 
     /* Page hero text and media sweep */
@@ -821,11 +801,6 @@
       });
     }
 
-    var hero = document.querySelector('.hero');
-    document.querySelectorAll('.hero-bg-layer').forEach(function (layer, index) {
-      add(layer, index === 0 ? 0.72 : 1.05, 'y', hero);
-    });
-
     document.querySelectorAll('.story-image').forEach(function (image) {
       add(image, -0.34, 'y', image.closest('.story-block'));
     });
@@ -833,8 +808,6 @@
     document.querySelectorAll('.spotlight-card img').forEach(function (image) {
       add(image, -0.18, 'y', image.closest('.spotlight-card'));
     });
-
-    add(document.querySelector('.hero-content'), -0.16, 'y', hero);
 
     function update() {
       var currentScrollY = window.scrollY || window.pageYOffset || 0;
@@ -862,15 +835,97 @@
         item.el.style.transform = base + 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0)';
       });
 
-      if (hero) {
-        document.documentElement.style.setProperty('--scroll-depth', Math.min(currentScrollY / Math.max(viewportHeight, 1), 1).toFixed(3));
-      }
       requestAnimationFrame(update);
     }
 
     requestAnimationFrame(update);
     window.addEventListener('resize', function () { lastScrollY = -1; }, { passive: true });
     window.nativeParallaxRefresh = update;
+  }
+
+  function initBoomerangBg() {
+    var container = document.getElementById('boomerangBg');
+    if (!container) return;
+
+    var videoUrl = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_131941_d136af49-e243-493a-be14-6ff3f24e09e6.mp4';
+
+    var video = document.createElement('video');
+    video.muted = true;
+    video.playsInline = true;
+    video.preload = 'auto';
+    video.crossOrigin = 'anonymous';
+    video.src = videoUrl;
+    video.className = 'hero-vid-video';
+    container.appendChild(video);
+
+    var displayCanvas = document.createElement('canvas');
+    displayCanvas.className = 'hero-vid-canvas';
+    displayCanvas.style.display = 'none';
+    container.appendChild(displayCanvas);
+
+    var frames = [];
+    var capturing = false;
+    var MAX_WIDTH = 960;
+
+    function captureFrame() {
+      if (video.readyState < 2) return;
+      var vw = video.videoWidth;
+      var vh = video.videoHeight;
+      if (!vw || !vh) return;
+      var scale = Math.min(1, MAX_WIDTH / vw);
+      var w = Math.round(vw * scale);
+      var h = Math.round(vh * scale);
+      var canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      var ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      ctx.drawImage(video, 0, 0, w, h);
+      frames.push(canvas);
+    }
+
+    var captureRaf;
+    function captureLoop() {
+      if (!capturing) return;
+      captureFrame();
+      captureRaf = requestAnimationFrame(captureLoop);
+    }
+
+    video.addEventListener('loadedmetadata', function () {
+      capturing = true;
+      video.play().catch(function () {});
+      captureRaf = requestAnimationFrame(captureLoop);
+    });
+
+    video.addEventListener('ended', function () {
+      capturing = false;
+      if (captureRaf) cancelAnimationFrame(captureRaf);
+      video.style.display = 'none';
+      if (!frames.length) return;
+      var first = frames[0];
+      displayCanvas.width = first.width;
+      displayCanvas.height = first.height;
+      displayCanvas.style.display = 'block';
+      var index = 0;
+      var direction = 1;
+      var lastTime = performance.now();
+      var interval = 1000 / 30;
+      var ctx = displayCanvas.getContext('2d');
+      if (!ctx) return;
+      function boomerangLoop(now) {
+        if (now - lastTime >= interval) {
+          lastTime = now;
+          ctx.drawImage(frames[index], 0, 0);
+          index += direction;
+          if (index >= frames.length - 1) direction = -1;
+          else if (index <= 0) direction = 1;
+        }
+        requestAnimationFrame(boomerangLoop);
+      }
+      requestAnimationFrame(boomerangLoop);
+    });
+
+    video.load();
   }
 
   /* Init */
@@ -880,7 +935,7 @@
     initLenis();
     initMarquee();
     initSwiper();
-    initKineticPointer();
+    initBoomerangBg();
 
     setTimeout(function () {
       initGSAP();
