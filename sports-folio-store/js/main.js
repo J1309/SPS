@@ -145,42 +145,26 @@
 
     var mm = gsap.matchMedia();
 
-    /* Hero parallax: 2-layer depth effect */
+    /* Hero parallax: page-hero media + content */
     mm.add('(prefers-reduced-motion: no-preference)', function () {
-      var heroLayers = document.querySelectorAll('.hero-bg-layer');
-      if (heroLayers.length) {
-        gsap.to(heroLayers[0], {
-          yPercent: 25,
+      var heroMedia = document.querySelector('.page-hero-media');
+      if (heroMedia) {
+        gsap.to(heroMedia, {
+          yPercent: 18,
           ease: 'none',
-          scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1.5 },
+          scrollTrigger: { trigger: '.page-hero', start: 'top top', end: 'bottom top', scrub: 1.5 },
         });
-        if (heroLayers[1]) {
-          gsap.to(heroLayers[1], {
-            yPercent: 35,
-            ease: 'none',
-            scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1.5 },
-          });
-        }
       }
 
-      var heroTitle = document.querySelector('.hero-title');
-      var heroBadge = document.querySelector('.hero-badge');
-      var heroDesc = document.querySelector('.hero-desc');
-      var heroCta = document.querySelector('.hero-cta');
+      var heroBadge = document.querySelector('.page-hero-content .hero-badge');
+      var heroTitle = document.querySelector('.page-hero-content h1');
+      var heroDesc = document.querySelector('.page-hero-content p');
+      var heroBtn = document.querySelector('.page-hero-content .btn');
 
       if (heroBadge) gsap.from(heroBadge, { y: 24, opacity: 0, duration: 0.7, delay: 0.1, ease: 'power2.out' });
-      if (heroTitle) {
-        gsap.from(heroTitle.querySelectorAll('.line'), {
-          y: 80,
-          opacity: 0,
-          duration: 1.1,
-          stagger: 0.2,
-          ease: 'power3.out',
-          delay: 0.3,
-        });
-      }
-      if (heroDesc) gsap.from(heroDesc, { y: 24, opacity: 0, duration: 0.7, delay: 0.6, ease: 'power2.out' });
-      if (heroCta) gsap.from(heroCta, { y: 24, opacity: 0, duration: 0.7, delay: 0.8, ease: 'power2.out' });
+      if (heroTitle) gsap.from(heroTitle, { y: 60, opacity: 0, duration: 1, delay: 0.25, ease: 'power3.out' });
+      if (heroDesc) gsap.from(heroDesc, { y: 24, opacity: 0, duration: 0.7, delay: 0.5, ease: 'power2.out' });
+      if (heroBtn) gsap.from(heroBtn, { y: 24, opacity: 0, duration: 0.7, delay: 0.7, ease: 'power2.out' });
 
       var heroStack = document.querySelector('.hero-kinetic-stack');
       if (heroStack) gsap.from(heroStack.children, { x: 42, opacity: 0, duration: 0.8, stagger: 0.12, delay: 0.9, ease: 'power3.out' });
@@ -188,7 +172,7 @@
 
     /* Page hero text and media sweep */
     mm.add('(prefers-reduced-motion: no-preference)', function () {
-      var pageHero = document.querySelector('.page-hero');
+      var pageHero = document.querySelector('.page-hero:not(.index-hero)');
       if (!pageHero) return;
       gsap.from('.page-hero-content > *', {
         y: 34,
@@ -219,7 +203,7 @@
     mm.add('(prefers-reduced-motion: no-preference)', function () {
       gsap.utils.toArray('.parallax-layer').forEach(function (layer) {
         var speed = parseFloat(layer.getAttribute('data-speed')) || -0.1;
-        if (layer.closest('.hero')) return;
+        if (layer.closest('.hero') || layer.closest('.page-hero')) return;
         gsap.to(layer, {
           yPercent: speed * 100,
           ease: 'none',
@@ -791,7 +775,7 @@
 
   function initKineticPointer() {
     var floatTarget = document.querySelector('.parallax-float');
-    var hero = document.querySelector('.kinetic-hero');
+    var hero = document.querySelector('.index-hero');
     if (!floatTarget || !hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     floatTarget.style.willChange = 'transform';
     hero.addEventListener('pointermove', function (event) {
@@ -821,10 +805,9 @@
       });
     }
 
-    var hero = document.querySelector('.hero');
-    document.querySelectorAll('.hero-bg-layer').forEach(function (layer, index) {
-      add(layer, index === 0 ? 0.72 : 1.05, 'y', hero);
-    });
+    var hero = document.querySelector('.page-hero');
+    var heroMedia = document.querySelector('.page-hero-media');
+    if (heroMedia) add(heroMedia, 0.55, 'y', hero);
 
     document.querySelectorAll('.story-image').forEach(function (image) {
       add(image, -0.34, 'y', image.closest('.story-block'));
@@ -834,7 +817,7 @@
       add(image, -0.18, 'y', image.closest('.spotlight-card'));
     });
 
-    add(document.querySelector('.hero-content'), -0.16, 'y', hero);
+    add(document.querySelector('.page-hero-content'), -0.16, 'y', hero);
 
     function update() {
       var currentScrollY = window.scrollY || window.pageYOffset || 0;
